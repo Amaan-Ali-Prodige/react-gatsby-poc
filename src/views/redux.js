@@ -27,6 +27,6 @@ function mapStateToProps(state) {
     salary: state.salary,
   }
 }
-export default connect(mapStateToProps)(Redux)
+// export default connect(mapStateToProps)(Redux)
 // above doesnt work on gatsby, use the one below
-// export default Redux
+export default Redux
