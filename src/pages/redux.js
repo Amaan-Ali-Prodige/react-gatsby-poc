@@ -14,7 +14,7 @@ const Redux = props => {
       <br />
       <br />
       <br />
-      {props.salary || "loading"}
+      {props.salary || "number dint load"}
       <br />
       <button onClick={incrementSalary}>incre</button>
       <button onClick={decrementSalary}>decre</button>
