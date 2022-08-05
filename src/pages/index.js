@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
-import Redux from "./redux"
+import Redux from "../views/redux"
 import { legacy_createStore as createStore } from "redux"
 import { Provider } from "react-redux"
 
@@ -28,8 +28,8 @@ const IndexPage = () => {
         <Link to="/page-3">3rd page</Link>
         <br />
         <Link to="/number">React State Example</Link>
-        <br />
-        <Link to="/redux">React Redux Example</Link>
+        {/* <br />
+        <Link to="/redux">React Redux Example</Link> */}
         <Redux />
       </Provider>
     </>
