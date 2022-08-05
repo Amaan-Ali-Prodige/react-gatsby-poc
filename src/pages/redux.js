@@ -1,12 +1,12 @@
 import React from "react"
-// import { connect } from "react-redux"
+import { connect } from "react-redux"
 
 const Redux = props => {
   const incrementSalary = () => {
-    // props.dispatch({ type: "INCREMENT" })
+    props.dispatch({ type: "INCREMENT" })
   }
   const decrementSalary = () => {
-    // props.dispatch({ type: "DECREMENT" })
+    props.dispatch({ type: "DECREMENT" })
   }
 
   return (
@@ -21,10 +21,10 @@ const Redux = props => {
   )
 }
 
-// function mapStateToProps(state) {
-//   return {
-//     salary: state.salary,
-//   }
-// }
+function mapStateToProps(state) {
+  return {
+    salary: state.salary,
+  }
+}
 // export default connect(mapStateToProps)(Redux)
 export default Redux
