@@ -2,7 +2,8 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
 import Redux from "./redux"
-import { createStore } from "redux"
+// import { createStore } from "redux"
+import { legacy_createStore as createStore } from "redux"
 import { Provider } from "react-redux"
 
 const employeeData = { salary: 1000 }
