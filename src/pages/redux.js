@@ -15,6 +15,7 @@ const Redux = props => {
       <br />
       <br />
       {props.salary || "loading"}
+      <br />
       <button onClick={incrementSalary}>incre</button>
       <button onClick={decrementSalary}>decre</button>
     </div>
@@ -26,5 +27,5 @@ function mapStateToProps(state) {
     salary: state.salary,
   }
 }
-// export default connect(mapStateToProps)(Redux)
-export default Redux
+export default connect(mapStateToProps)(Redux)
+// export default Redux
