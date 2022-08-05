@@ -1,6 +1,5 @@
 import React from "react"
 import { connect } from "react-redux"
-import { Provider } from "react-redux"
 
 const Redux = props => {
   const incrementSalary = () => {
@@ -11,17 +10,15 @@ const Redux = props => {
   }
 
   return (
-    <Provider store={props.store}>
-      <div>
-        <br />
-        <br />
-        <br />
-        {props.salary || "loading"}
-        <br />
-        <button onClick={incrementSalary}>incre</button>
-        <button onClick={decrementSalary}>decre</button>
-      </div>
-    </Provider>
+    <div>
+      <br />
+      <br />
+      <br />
+      {props.salary || "loading"}
+      <br />
+      <button onClick={incrementSalary}>incre</button>
+      <button onClick={decrementSalary}>decre</button>
+    </div>
   )
 }
 
@@ -30,5 +27,6 @@ function mapStateToProps(state) {
     salary: state.salary,
   }
 }
-export default connect(mapStateToProps)(Redux)
-// export default Redux
+// export default connect(mapStateToProps)(Redux)
+// above doesnt work on gatsby, use the one below
+export default Redux
