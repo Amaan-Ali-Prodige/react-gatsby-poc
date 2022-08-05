@@ -1,5 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
+import { Provider } from "react-redux"
 
 const Redux = props => {
   const incrementSalary = () => {
@@ -10,15 +11,17 @@ const Redux = props => {
   }
 
   return (
-    <div>
-      <br />
-      <br />
-      <br />
-      {props.salary || "loading"}
-      <br />
-      <button onClick={incrementSalary}>incre</button>
-      <button onClick={decrementSalary}>decre</button>
-    </div>
+    <Provider store={props.store}>
+      <div>
+        <br />
+        <br />
+        <br />
+        {props.salary || "loading"}
+        <br />
+        <button onClick={incrementSalary}>incre</button>
+        <button onClick={decrementSalary}>decre</button>
+      </div>
+    </Provider>
   )
 }
 
