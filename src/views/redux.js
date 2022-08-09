@@ -4,17 +4,17 @@ import { connect } from "react-redux"
 
 const Redux = props => {
   const incrementSalary = () => {
-    props?.dispatch({ type: "INCREMENT" })
+    props.dispatch({ type: "INCREMENT" })
   }
   const decrementSalary = () => {
-    props?.dispatch({ type: "DECREMENT" })
+    props.dispatch({ type: "DECREMENT" })
   }
   return (
     <div>
       <br />
       <br />
       <br />
-      {props?.salary || "number dint load"}
+      {props.salary || "number dint load"}
       <br />
       <button onClick={incrementSalary}>incre</button>
       <button onClick={decrementSalary}>decre</button>
@@ -30,6 +30,6 @@ const mapStateToProps = state => {
   }
 }
 
-// export default connect(mapStateToProps)(Redux)
+export default connect(mapStateToProps)(Redux)
 // above doesnt work on gatsby, use the one below
-export default Redux
+// export default Redux
